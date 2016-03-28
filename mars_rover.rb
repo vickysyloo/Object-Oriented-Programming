@@ -42,6 +42,7 @@ class Rover
           @direction - "N"
         end
     end
+  end
     when new_direction == "L"
       if @direction == "N"
         @direction = "E"
@@ -53,13 +54,11 @@ class Rover
         @direction = "S"
       end
     end
-
   end
 
 
-
   def current_position
-    puts "The Rover's position is at (#{@x}, #{@y}) and facing #{@direction}."
+    puts "The Rover's position is currently at (#{@x}, #{@y}) and facing #{@direction}."
   end
 
 end
