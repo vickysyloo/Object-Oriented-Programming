@@ -64,3 +64,6 @@ class Rover
   end
 
 end
+
+puts "Please input your rover's current position (ex. 1, 2, S)"
+directions = gets.chomp
