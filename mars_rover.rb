@@ -30,27 +30,29 @@ class Rover
     end
   end
 
-  def turn(new_direction)
-    when new_direction == "R"
-        if @direction == "N"
-          @direction = "E"
-        elsif @direction == "S"
-          @direction == "W"
-        elsif @direction == "E"
-          @direction = "S"
-        elsif @direction == "W"
-          @direction - "N"
-        end
+  def turn(R)
+    case new_direction == "R"
+      when @direction == "N"
+        @direction = "E"
+      when @direction == "S"
+        @direction == "W"
+      when @direction == "E"
+        @direction = "S"
+      else @direction == "W"
+        @direction - "N"
+      end
     end
   end
-    when new_direction == "L"
-      if @direction == "N"
+
+  def turn(L)
+    case new_direction == "L"
+      when @direction == "N"
         @direction = "E"
-      if @direction == "S"
+      when @direction == "S"
         @direction = "W"
-      if @direction == "E"
+      when @direction == "E"
         @direction = "N"
-      if @direction == "W"
+      else @direction == "W"
         @direction = "S"
       end
     end
