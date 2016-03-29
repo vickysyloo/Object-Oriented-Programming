@@ -2,19 +2,21 @@
 
 class Rover
 
-  def initialize(x, y, direction)
+  def initialize(x, y, direction, width = 10, height = 10)
     @y = y
     @x = x
     @direction = direction
+    @width = width
+    @height = height
   end
 
   def read_instruction(instruction)
     if instruction == "M"
-      r.move
+      move
     elsif instruction == "R"
-        r.right
+        turn_right
     elsif instruction == "L"
-        r.left
+        turn_left
     end
   end
 
@@ -30,7 +32,7 @@ class Rover
     end
   end
 
-  def turn(R)
+  def turn_right
     case new_direction == "R"
       when @direction == "N"
         @direction = "E"
@@ -44,7 +46,7 @@ class Rover
     end
   end
 
-  def turn(L)
+  def turn_left
     case new_direction == "L"
       when @direction == "N"
         @direction = "E"
@@ -65,5 +67,17 @@ class Rover
 
 end
 
+puts "Please specify the size of your plateau (ex. 2, 5)"
+size = gets.chomp
+
 puts "Please input your rover's current position (ex. 1, 2, S)"
-directions = gets.chomp
+position = gets.chomp
+
+puts "Please enter instructions to direct your rover"
+instructions = gets.chomp
+
+puts "Please enter the position of the second rover"
+position = gets.chomp
+
+puts "Please enter instructions to direct your second rover"
+instructions = gets.chomp
