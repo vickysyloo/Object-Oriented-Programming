@@ -58,14 +58,12 @@ class Rover
         @direction = "S"
       end
     end
-  end
 
 
   def current_position
     puts "The Rover's position is currently at (#{@x}, #{@y}) and facing #{@direction}."
   end
 
-end
 
 puts "Please specify the size of your plateau (ex. 2, 5)"
 size = gets.chomp
